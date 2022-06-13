@@ -35,4 +35,15 @@ overlay.addEventListener("click",closeModal)
 
 // Handling Keypress Events
 
-document.addEventListener("keydown",closeModal);
+document.addEventListener("keydown",function(e){
+    console.log(e.key);  // key is a property of the "e" object
+
+    if(e.key === "Escape" && !modal.classList.contains("hidden")){
+        closeModal();
+}
+
+})
+
+// We inverted the boolean value by adding the exclamation point in the beginning 
+
+
